@@ -12,6 +12,8 @@ use XSLTProcessor;
  */
 function createInkyProcessor()
 {
+    libxml_disable_entity_loader(false);
+    
     $general = new DOMDocument();
     $general->load(__DIR__ . "/inky.xsl");
 
